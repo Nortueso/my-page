@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(36, 32, 35);
+}
+
+.paragf {
+    background-color: rgb(93, 57, 82);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight:bold ;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+    transform: translate(110px, -20px);
+    position: fixed;
+}
+
+.span:hover {
+    text-decoration: underline;
+}
+
+.game {
+    margin-left: 30px;
+    background-color: black;
+    border: none;
+    padding: 45px;
+    border-radius: 100%;
+    margin-top: 0px;
+    transform: translate(0px , 80px );
+    transition: opacity 0.35s,
+    margin-top 0.35s,
+    margin-left 2s,
+    background-color 1.5s,
+    background-color 0.35s,
+    padding 1.5s,
+    border-radius 1.5s,
+    box-shadow 1.5s,
+    opacity 1.5s;
+}
+.game:hover {
+    margin-right: 100px;
+    background-color: rgb(253, 255, 254);
+    padding: 60px;
+    cursor: pointer;
+    border-radius: 25%;
+    box-shadow: 0 10px 20px black; 
+    ;
+}
+.game:active{ 
+    background-color: rgb(101, 99, 99) ;
+    cursor: progress;
+}
+
+body {
+    background-color: rgb(91, 89, 89);
+}

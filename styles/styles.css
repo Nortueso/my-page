@@ -1,59 +1,174 @@
-body {
-    background-color: rgb(36, 32, 35);
+
+body{
+    background-color: var(--text1);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--bg);
 }
 
-.paragf {
-    background-color: rgb(93, 57, 82);
-    color: white;
-    font-family: Arial, sans-serif;
-    font-weight:bold ;
-    font-size: 30px;
-    text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    border-radius: 10px;
-    transform: translate(110px, -20px);
-    position: fixed;
+:root {
+    --bg:#231D1D;
+    --bg1: #1b1717;
+    --bg2: #2d2525;
+
+    --text1: #F4EFEA;
+
+
+    /*--accent-g1: #57655a;
+    --accent-g2: #6e7f70;
+    --accent-g3: #8fa592;*/
+
+    --accent-p1: #674747;
+    --accent-p2: #815959;
+    --accent-p3: #a77474;
 }
 
-.span:hover {
-    text-decoration: underline;
-}
-
-.game {
-    margin-left: 30px;
-    background-color: black;
+.a {
+    display: inline-block;
+    margin-top: 5px;
+    background-color: var(--accent-p1);
+    color: var(--bg);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+    border-radius: 4px;
     border: none;
-    padding: 45px;
-    border-radius: 100%;
-    margin-top: 0px;
-    transform: translate(0px , 80px );
-    transition: opacity 0.35s,
-    margin-top 0.35s,
-    margin-left 2s,
-    background-color 1.5s,
+    transition:
     background-color 0.35s,
-    padding 1.5s,
-    border-radius 1.5s,
-    box-shadow 1.5s,
-    opacity 1.5s;
-}
-.game:hover {
-    margin-right: 100px;
-    background-color: rgb(253, 255, 254);
-    padding: 60px;
-    cursor: pointer;
-    border-radius: 25%;
-    box-shadow: 0 10px 20px black; 
+    padding 0.35s,
+    color 0.35s,
+    box-shadow 0.35s
     ;
 }
-.game:active{ 
-    background-color: rgb(101, 99, 99) ;
-    cursor: progress;
+
+.a:hover {
+    color: var(--text1);
+    padding: 6px;
+    box-shadow: 0 0 20px 5px var(--accent-p3);
 }
 
-body {
-    background-color: rgb(91, 89, 89);
+header{
+
+    background-color: none;
 }
+
+.zagp {
+    background-color: var(--accent-p1);
+    color: var(--text1);
+    border-radius: 4px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.35s,
+
+    box-shadow 0.35s;
+}
+.zagp:hover {
+    background-color: var(--bg1);
+    box-shadow: 0 0 20px 5px var(--accent-2);
+}
+
+.btns {
+    background-color: var(--accent-p1);
+    color: var(--text);
+    padding-top: 2px;
+    text-decoration: none;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 4px;
+    border: 0 2px 2px;
+    border-color: var(--accent-p2);
+    transition:
+    background-color 0.35s,
+    padding 0.35s,
+    color 0.35s,
+    box-shadow 0.35s
+    ;
+}
+
+.btns:hover {
+    background-color: var(--accent-p2);
+    color: var(--text1);
+    padding: 6px;
+    box-shadow: 0 0 20px 5px var(--accent-p3);
+}
+.nick {
+    background-color: var(--accent-p1);
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+    transition: padding 0.35s,
+    box-shadow 0.35s,
+    color 0.35s,
+    background-color 0.35s;
+}
+.nick:hover {
+    padding: 8px;
+    box-shadow: 0 0 20px 5px var(--accent-p3);
+    background-color: var(--accent-p1);
+    color: var(--text1)
+}
+
+.butt {
+    text-decoration: none;
+    color: var(--bg);
+    padding: 2px;
+    background-color: var(--accent-p1);
+    padding: 2px;
+    border-radius: 2px;
+    transition:
+    background-color 0.35s,
+    padding 0.35s,
+    color 0.35s,
+    box-shadow 0.35s;
+}
+.butt:hover {
+    background-color: var(--accent-p2);
+    color: var(--text1);
+    padding: 6px;
+    box-shadow: 0 0 20px 5px var(--accent-p3);
+}
+.tools {
+    background-color: var(--accent-p2);
+    color: var(--bg2);
+    border-radius: 4px;
+    text-align: center;
+}
+.boxabout {
+    background-color: var(--accent-p3);
+    color: var(--text1);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+#footer {
+    background-color: var(--accent-p1);
+    border: none;
+    padding: 2px;
+    border-radius: 4px;
+    transition:
+    color 0.35s,
+    padding 0.35s,
+    background-color 0.35s;
+
+}
+
+#footer:hover {
+    padding: 5px;
+    color: var(--text1);
+    background-color: var(--accent-p3);
+}
+
+.photo {
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+
+.photo:hover {
+    width: 100%;
+}
+

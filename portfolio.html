@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- ВАЖНО для телефонов: без этой строки телефон показывает сайт как уменьшенную версию компьютерного -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nortueso — Python-разработчик</title>
+  <meta name="description" content="Портфолио Nortueso: Telegram-боты, парсеры, веб-разработка, монтаж.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet"><style>
+    /* ===== СТРУКТУРА (адаптив). Лучше не трогать, пока не поймёшь, зачем каждая строка ===== */
+    * { box-sizing: border-box; }                 /* ширина блока включает padding и рамку */
+    body { margin: 0; line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }  /* картинка никогда не шире экрана */
+    .container { width: min(1100px, 100% - 32px); margin-inline: auto; }  /* на ПК до 1100px, на телефоне весь экран минус по 16px с краёв */
+    section { padding: 48px 0; }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }  /* wrap: на узком экране аватарка и текст встают друг под друга */
+    .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }  /* сколько карточек влезет в ряд: на ПК 2–3, на телефоне 1 */
+    .photo { width: 80%; aspect-ratio: 16 / 9; object-fit: cover; }  /* все фото одной формы, лишнее обрезается */
+    .card { cursor: pointer; }
+
+  </style>
+</head>
+<body>
+
+
+  <header class="container">
+    <a class="a" href="#top">Nortueso</a>
+    <nav>
+      <a class="a" href="#projects">Projects</a>
+      <a class="a" href="#services">Service</a>
+      <a class="a" href="#contacts">Contacts</a>
+    </nav>
+  </header>
+
+  <main class="container" id="top">
+
+
+    <section class="hero">
+      <!-- ФОТО №1: аватарка. Файл images/avatar.jpg, размер 400x400 -->
+      <img class="avatar" src="image/avatar.png" alt="Аватарка Nortueso" width="400" height="400">
+      <div>
+        <h1>Привет, я <span class="nick">Nortueso</span></h1>
+        <p id="text">Python-разработчик: делаю Telegram-ботов, парсеры и сайты.</p>
+        <!-- Кнопка-ссылка: внешняя ссылка открывается в новой вкладке -->
+        <a class="btns" href="https://t.me/Nortueso" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+        <a class="btns" href="#projects">Смотреть проекты</a>
+      </div>
+    </section>
+
+    <!-- ПРОЕКТЫ -->
+    <section id="projects">
+      <h2 class="zagp">ПРОЕКТЫ</h2>
+      <div class="projects">
+
+        <!-- КАРТОЧКА 1. ФОТО №2: images/resender.jpg, размер 1200x675 -->
+        <article class="card" data-href="https://t.me/ССЫЛКА_НА_БОТА">
+          <img class="photo" src="image/image02.png" alt="Скриншот resender-asisstant-bot" width="1200" height="675" loading="lazy">
+          <h3>resender-asisstant-bot</h3>
+          <p class="boxabout">Бот-приёмник: человек пишет боту, а владельцу приходит сообщение с юзернеймом отправителя.</p>
+          <p class="tools">Python · aiogram</p>
+          <a class="butt" href="https://t.me/ССЫЛКА_НА_БОТА" target="_blank" rel="noopener noreferrer">Открыть бота</a>
+          <a class="butt" href="https://github.com/ТВОЙ_НИК/РЕПОЗИТОРИЙ" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+        <!-- КАРТОЧКА 2. ФОТО №3: images/chrono.jpg -->
+        <article class="card" data-href="https://t.me/ССЫЛКА_НА_БОТА">
+          <img class="photo" src="images/chrono.jpg" alt="Скриншот chrono-weather-bot" width="1200" height="675" loading="lazy">
+          <h3>chrono-weather-bot</h3>
+          <p class="boxabout">Показывает время и погоду, ставит напоминания с учётом часового пояса пользователя.</p>
+          <p class="tools">Python · aiogram · SQLite · OpenWeather API</p>
+          <a class="butt" href="https://t.me/ССЫЛКА_НА_БОТА" target="_blank" rel="noopener noreferrer">Открыть бота</a>
+          <a class="butt" href="https://github.com/ТВОЙ_НИК/РЕПОЗИТОРИЙ" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+        <!-- КАРТОЧКА 3. ФОТО №4: images/barbershop.jpg -->
+        <article class="card" data-href="https://t.me/ССЫЛКА_НА_БОТА">
+          <img class="photo" src="image/image01.png" alt="Скриншот barbershop-заказы-bot" width="1200" height="675" loading="lazy">
+          <h3>barbershop-заказы-bot</h3>
+          <p class="boxabout">Принимает заказы и записи клиентов барбершопа и передаёт их мастеру.</p>
+          <p class="tools"> Python · aiogram · база данных</p>
+          <a class="butt" href="https://t.me/ССЫЛКА_НА_БОТА" target="_blank" rel="noopener noreferrer">Открыть бота</a>
+          <a class="butt" href="https://github.com/ТВОЙ_НИК/РЕПОЗИТОРИЙ" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+        <!-- КАРТОЧКА 4. ФОТО №5: images/autoposter.jpg -->
+        <article class="card" data-href="https://t.me/ССЫЛКА_НА_БОТА">
+          <img class="photo" src="images/autoposter.jpg" alt="Скриншот auto-poster-bot" width="1200" height="675" loading="lazy">
+          <h3>auto-poster-bot</h3>
+          <p class="boxabout">Составляет посты по ключевым словам и публикует их в Telegram-каналах после согласия владельца.</p>
+          <p class="tools">Python · aiogram · несколько каналов</p>
+          <a class="butt" href="https://t.me/ССЫЛКА_НА_БОТА" target="_blank" rel="noopener noreferrer">Открыть бота</a>
+          <a class="butt" href="https://github.com/ТВОЙ_НИК/РЕПОЗИТОРИЙ" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services">
+      <h2 class="zagp">ЧТО Я ДЕЛАЮ</h2>
+      <ul>
+        <li>Telegram-боты: заявки, напоминания, магазины, ассистенты</li>
+        <li>Парсеры: сбор данных с сайтов в таблицу или базу</li>
+        <li>Сайты и бэкенд на Python</li>
+        <li>Монтаж коротких видео</li>
+      </ul>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts">
+      <h2 class="zagp">СВЯЗЬ</h2>
+      <p>Опиши задачу, и я назову цену и срок.</p>
+      <a class="butt" href="https://t.me/Nortueso" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a class="butt" href="https://github.com/Nortueso" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="butt" href="https://t.me/NortuesoNews" target="_blank" rel="noopener noreferrer">Мой канал</a>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <button href="https:/t.me/NortuesoNews" id="footer">© 2026 Nortueso</button>
+  </footer>
+
+  <script>
+    /* Делает кликабельным ЛЮБОЙ элемент, у которого есть атрибут data-href (например, всю карточку) */
+    const clickable = document.querySelectorAll('[data-href]');   // 1. находим все такие элементы
+
+    clickable.forEach(function (el) {                             // 2. для каждого из них...
+      el.addEventListener('click', function (event) {             // 3. ...слушаем клик
+        if (event.target.closest('a')) return;                    // 4. если нажали на обычную ссылку внутри, ничего не делаем (она сработает сама)
+        window.open(el.dataset.href, '_blank', 'noopener');       // 5. иначе открываем ссылку из data-href в новой вкладке
+      });
+    });
+  </script>
+</body>
+</html>
